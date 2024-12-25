@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@200;300;400;500;600;70;800;900&display=swap');
+
+body{
+   font-family: 'Poppins ',sans-serif;
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+#fooddelightimage {
+    height: 30px;
+    width: 30px;
+    margin: 6px 10px 0px 0px;
+}   
+
+
+body{
+    background-color: rgb(238, 208, 170);
+    /* background-image: url(/assest/back2.jpg); */
+    background-image: url(/assest/BACKGROUND.jpg);
+    
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5rem;
+    width: 100%;
+    z-index: 99;
+    background-color: rgb(231, 203, 79);
+    /* font-size: 500px; */
+}
+.nav{
+   max-width: 1200px;
+   margin: auto;
+   width: 100%;
+   height: 50px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.logo{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+   
+}
+#cart-count{
+    position: relative;
+    background-color: bisque;
+    top: 9px;
+    left: 89%;
+    height: 15px;
+    width: 15px;
+    padding: 3px;
+    /* line-height: 20px; */
+    border-radius: 50%;
+    z-index: 99;                                                          /*             3             */
+    
+}
+#cartimage{
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    top: 20px;
+    right: 34px;
+    /* margin: 6px 80px 90px 6px; */
+}   
+
+.food-image{
+    width: 100%;
+    height: 200px;
+    border-radius: 9px;
+     transition: 0.5;                                                    /* .......  1    */  
+    object-fit: cover;
+     aspect-ratio: 1/1;                      /                 /*              auto width and height */
+}
+.shop-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,auto));
+    gap: 2rem;
+    margin: 6rem;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    max-width: 1200px;
+    padding: 4rem;
+    margin: auto;
+    width: 100%;
+    /* background-image: url(/assest/background.jpeg); */
+   /* background-color: blueviolet; */
+}
+
+.title{
+    background-image: url(/assest/hand4.jpg);
+    height: 120px;
+    border-radius: 15px;
+    size: 20px;
+    
+} 
+.food-box{
+    position: relative;                                                      /* .......  2   */
+    background-color: rgb(250, 232, 210);
+    padding: 10px;
+    box-shadow: 0 1px 4px aliceblue;
+   border-radius: 3px;
+   /* transition: 0.5s; */
+}
+
+.pic :hover {
+    transform: scale(1.9);                                                     /* .......  1   */
+}    
+.pic{
+    overflow: hidden;
+}
+.foo-title{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+#foodcartimage{
+    position: absolute;                           
+    bottom: 0.5;
+    right: 0;
+    /* background-color: rgb(184, 184, 178); */
+    cursor: pointer;
+    padding: 2px;
+    font-size: 1.1rem;
+  
+    height: 20px;
+    width: 20px;
+
+}
+.food-image{
+    cursor: pointer;
+}
+#foodcartimage :hover {
+    background-color: rgb(214, 132, 8);
+}
+
+
+/*.................. CART ./............................... */
+
+.cart{
+    position: fixed;
+    /* left: 80%;  */
+    top: 0;
+    right:-100%;
+    width:342px;
+    height:100vh;
+    overflow-x: auto; 
+    overflow-y: hidden;
+    padding: 20px;
+    background-color: aliceblue;
+
+    box-shadow:  1px 4px rgb(169, 169, 255 ,0.1);
+    z-index: 100;                                                      /*       3         */
+}
+.cart-active{
+    right: 0;
+    transition: 0.5s;
+}
+.cart-title{
+        align-items: center;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        margin-left: 11rem;
+        margin-right: 3rem;
+        text-transform: uppercase;
+        background-color: blanchedalmond;
+        border: 1px solid blanchedalmond;
+}
+.cart-box{
+          display: grid;
+          grid-template-columns: 32% 50% 18%;
+          align-items: center;
+          gap: 1rem;
+          margin-top: 1rem;
+          border-bottom: 0.1px solid rgb(195, 195, 195);
+          padding-bottom: 10px;
+          /* position: relative; */
+}
+#trash{
+    height: 20px;
+    width: 20px;
+    margin: 9px 0px 0px 11rem;
+    cursor: pointer;
+}
+.cart-image{
+    height: 90px;
+    width: 100px;
+    border: 3px solid rgb(222, 222, 222);
+    padding: 6px;
+    cursor: pointer;
+
+}
+.detail-box{
+    display: grid;
+    position: absolute;
+    row-gap: 1rem;
+    left: 10rem;
+}
+.price-box{
+    display: flex;
+    justify-content: center;
+    margin-right: 1rem;
+}
+.card-food-title{
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: rgb(159, 38, 16);
+    
+}
+.cart-price{
+      color: rgb(17, 93, 164);
+      font-size: 15px;
+}
+.cart-quantity{
+    width: 2.4rem;
+  
+    margin-left: 1rem;
+    outline: none;
+    border: 
+    1px solid rgb(200, 200, 200);
+}
+#cancel{
+    height: 20px;
+    width: 20px;
+    margin: 1px 0px 0px;
+    cursor: pointer;
+}
+.total{
+  display: flex;
+  margin-top: 2rem;
+  margin-left: 14rem;
+  
+}
+.total-title{
+     font-weight: 700;
+     font-size: 20px;
+}
+.total-price{
+     margin-left: 1.5rem;
+     font-size: 19px;
+}
+.buy-btn{
+       padding: 12px 20px;
+       border: none;
+       background-color: rgb(202, 166, 123);
+       cursor: pointer;
+       border-radius: 5px;
+       
+}
+#cancel{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 5px;
+    margin-right: 5px;
+    /* color: cadetblue; */
+}
